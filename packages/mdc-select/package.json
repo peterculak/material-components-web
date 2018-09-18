@@ -20,6 +20,7 @@
     "@material/floating-label": "^0.40.0",
     "@material/line-ripple": "^0.40.0",
     "@material/menu": "^0.40.0",
+    "@material/menu-surface": "^0.40.0",
     "@material/notched-outline": "^0.40.0",
     "@material/ripple": "^0.40.0",
     "@material/rtl": "^0.39.1",
