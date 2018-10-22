@@ -25,7 +25,7 @@
 import {assert} from 'chai';
 import td from 'testdouble';
 import bel from 'bel';
-import {MyButtonMenu} from '../../../packages/my-button-menu/index';
+import {MyButtonToggle} from '../../../packages/my-button-toggle/index';
 
 function getFixture() {
   return bel`
@@ -40,11 +40,9 @@ function setupTest(root = getFixture()) {
   return {root, component, mockFoundation};
 }
 
-suite('MyButtonMenu');
+suite('MyButtonToggle');
 
-test('attachTo initializes and returns a MyButtonMenu instance', () => {
-  // assert.isTrue(MyButtonMenu.attachTo(getFixture()) instanceof MyButtonMenu);
-  // assert.isTrue(MyButtonMenu.attachTo(getFixture()) instanceof MyButtonMenu);
-  let instance = new MyButtonMenu(getFixture());
-  assert.isTrue(instance instanceof MyButtonMenu);
+test('attachTo initializes and returns a MyButtonToggle instance', () => {
+  const instance = new MyButtonToggle(getFixture());
+  assert.isTrue(instance instanceof MyButtonToggle);
 });

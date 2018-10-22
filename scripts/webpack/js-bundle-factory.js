@@ -131,7 +131,7 @@ class JsBundleFactory {
     return this.createCustomJs({
       bundleName: 'main-js-a-la-carte',
       chunks: {
-        buttonMenu: getAbsolutePath('/packages/my-button-menu/index.js'),
+        buttonToggle: getAbsolutePath('/packages/my-button-toggle/index.js'),
       },
       output: {
         fsDirAbsolutePath,

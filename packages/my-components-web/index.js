@@ -1,10 +1,11 @@
-// import autoInit from '@material/auto-init/index';
+import autoInit from '@material/auto-init/index';
+import * as buttonToggle from '../my-button-toggle/index';
 
 // Register all components
-// autoInit.register('MDCCheckbox', checkbox.MDCCheckbox);
+autoInit.register('MyButtonToggle', buttonToggle.MyButtonToggle);
 
 // Export all components.
 export {
-  // autoInit,
-  // checkbox,
+  autoInit,
+  buttonToggle,
 };
