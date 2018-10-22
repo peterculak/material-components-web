@@ -49,6 +49,11 @@ class Environment {
   getNpmLifecycleEvent_() {
     return process.env.npm_lifecycle_event;
   }
+
+  isTest() {
+    const event = this.getNpmLifecycleEvent_();
+    return event.indexOf('test') > -1;
+  }
 }
 
 module.exports = Environment;

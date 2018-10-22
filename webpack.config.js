@@ -44,8 +44,16 @@ const OUTPUT = {
 };
 
 module.exports = [
-  jsBundleFactory.createMainJsCombined({output: OUTPUT}),
-  jsBundleFactory.createMainJsALaCarte({output: OUTPUT}),
   cssBundleFactory.createMainCssCombined({output: OUTPUT}),
   cssBundleFactory.createMainCssALaCarte({output: OUTPUT}),
 ];
+
+// jsBundleFactory.createMainJsCombined causes below problem when running in test
+// jsBundleFactory.createMainJsALaCarte causes below problem when running in test
+// TypeError: Class constructor MDCComponent cannot be invoked without 'new'
+if (!env.isTest()) {
+  module.exports.concat([
+    jsBundleFactory.createMainJsCombined({output: OUTPUT}),
+    jsBundleFactory.createMainJsALaCarte({output: OUTPUT}),
+  ]);
+}

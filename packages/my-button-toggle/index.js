@@ -29,4 +29,4 @@ class MyButtonToggle extends MDCComponent {
   }
 }
 
-export {MyButtonToggle};
+export {MyButtonToggle, MyRedblueToggleFoundation};

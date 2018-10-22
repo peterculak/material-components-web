@@ -25,25 +25,25 @@
 import {assert} from 'chai';
 import td from 'testdouble';
 import bel from 'bel';
-import {MyButtonToggle} from '../../../packages/my-button-toggle/index';
+import {MyButtonToggle, MyRedblueToggleFoundation} from '../../../packages/my-button-toggle/index';
 
 function getFixture() {
   return bel`
-  <div></div>
+  <div class="redblue-toggle" role="button" aria-pressed="false">
+  Toggle <span class="redblue-toggle__color">Blue</span>
+  </div>
   `;
 }
 
-// function setupTest(root = getFixture()) {
-//   const MockFoundationCtor = td.constructor(MDCListFoundation);
-//   const mockFoundation = new MockFoundationCtor();
-//   const component = new MDCList(root, mockFoundation);
-//   return {root, component, mockFoundation};
-// }
+function setupTest(root = getFixture()) {
+  const MockFoundationCtor = td.constructor(MyRedblueToggleFoundation);
+  const mockFoundation = new MockFoundationCtor();
+  const component = new MyButtonToggle(root, mockFoundation);
+  return {root, component, mockFoundation};
+}
 
-suite('MyButtonToggle');
+suite('MYButtonToggle');
 
 test('attachTo initializes and returns a MyButtonToggle instance', () => {
-  const instance = new MyButtonToggle(getFixture());
-  console.log(instance);
-  // assert.isTrue(instance instanceof MyButtonToggle);
+  assert.isTrue(MyButtonToggle.attachTo(getFixture()) instanceof MyButtonToggle);
 });
