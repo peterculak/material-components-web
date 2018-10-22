@@ -41,7 +41,7 @@
  * bump.
  *
  * This script will output each package which has deemed to have been changed, along with its new version
- * and the commit that caused it to change. It will also output the new version for the 'material-components-web'
+ * and the commit that caused it to change. It will also output the new version for the 'my-components-web'
  * package based off the most significant change type within the subpackages. Additionally, it will write the
  * component/version info to a human-readable text file .new-versions.log within the script's CWD.
  *
@@ -96,10 +96,10 @@ const commitMatches = childProcess
   })
   .filter((info) => Boolean(info) && affectsPackage(info.scope));
 const componentPkgs = updatedPkgs.filter(({name}) => name.indexOf('@material') === 0);
-const mdcPkg = updatedPkgs.find(({name}) => name === 'material-components-web');
+const mdcPkg = updatedPkgs.find(({name}) => name === 'my-components-web');
 const newPkgVersions = collectNewPkgVersions(componentPkgs, commitMatches);
 const newMDCVersion = Object.assign(collectMDCVersion(mdcPkg, newPkgVersions), {
-  name: 'material-components-web',
+  name: 'my-components-web',
   causedByCommit: 'N/A',
 });
 
@@ -177,7 +177,7 @@ function collectMDCVersion(mdcPkg, newPkgVersions) {
   const currentVersion = semver.valid(mdcPkg.version);
   if (!currentVersion) {
     throw new Error(
-      `Invalid material-components-web version ${mdcPkg.version}. This MUST change before release.`
+      `Invalid my-components-web version ${mdcPkg.version}. This MUST change before release.`
     );
   }
   const changeTypes = new Set(newPkgVersions.map(({changeType}) => changeType));

@@ -36,7 +36,7 @@ const {sync: globSync} = require('glob');
 const PKG_RE = /(?:material\-components\-web)|(?:mdc\.[a-zA-Z\-]+)/;
 
 const isValidCwd = (
-  path.basename(process.cwd()) === 'material-components-web' &&
+  path.basename(process.cwd()) === 'my-components-web' &&
   fs.existsSync('packages') &&
   fs.existsSync('build')
 );

@@ -43,9 +43,9 @@ const pkg = require(path.join(process.env.PWD, process.argv[process.argv.length 
 const REPO_PKG = require(path.join(process.env.PWD, 'package.json'));
 const WEBPACK_CONFIG_PATH = 'webpack.config.js';
 const WEBPACK_CONFIG = require(path.join(process.env.PWD, WEBPACK_CONFIG_PATH));
-const MASTER_PKG_PATH = 'packages/material-components-web/package.json';
-const MASTER_CSS_PATH = 'packages/material-components-web/material-components-web.scss';
-const MASTER_JS_PATH = 'packages/material-components-web/index.js';
+const MASTER_PKG_PATH = 'packages/my-components-web/package.json';
+const MASTER_CSS_PATH = 'packages/my-components-web/my-components-web.scss';
+const MASTER_JS_PATH = 'packages/my-components-web/index.js';
 const MASTER_PKG = require(path.join(process.env.PWD, MASTER_PKG_PATH));
 // These few MDC packages work as foundation or utility packages, and are not
 // directly included in webpack or the material-component-web module. But they

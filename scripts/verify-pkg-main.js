@@ -25,7 +25,7 @@ const fs = require('fs');
 const path = require('path');
 const {sync: globSync} = require('glob');
 
-const isValidCwd = fs.existsSync('packages') && fs.existsSync(path.join('packages', 'material-components-web', 'dist'));
+const isValidCwd = fs.existsSync('packages') && fs.existsSync(path.join('packages', 'my-components-web', 'dist'));
 
 if (!isValidCwd) {
   console.error(
