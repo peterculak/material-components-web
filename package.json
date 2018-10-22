@@ -176,5 +176,8 @@
     "mdc-tab-bar",
     "mdc-textfield",
     "mdc-top-app-bar"
-  ]
+  ],
+  "dependencies": {
+    "@material/base": "^0.40.1"
+  }
 }
