@@ -136,7 +136,7 @@ class JsBundleFactory {
       output: {
         fsDirAbsolutePath,
         httpDirAbsolutePath,
-        filenamePattern: this.env_.isProd() ? 'mdc.[name].min.js' : 'mdc.[name].js',
+        filenamePattern: this.env_.isProd() ? 'my.[name].min.js' : 'my.[name].js',
         library: ['my', '[name]'],
       },
       plugins: [
