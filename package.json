@@ -122,26 +122,6 @@
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.4.3"
   },
-  "babel": {
-    "presets": [
-      [
-        "es2015",
-        {
-          "modules": false
-        }
-      ]
-    ],
-    "plugins": [
-      "transform-object-assign"
-    ],
-    "env": {
-      "test": {
-        "presets": [
-          "es2015"
-        ]
-      }
-    }
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"

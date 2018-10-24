@@ -23,6 +23,7 @@
 
 import autoInit from '@material/auto-init/index';
 import * as base from '@material/base/index';
+import * as toggleButton from '../my-toggle-button/index';
 
 // Register all components
 // autoInit.register('MDCCheckbox', checkbox.MDCCheckbox);
@@ -31,4 +32,5 @@ import * as base from '@material/base/index';
 export {
   autoInit,
   base,
+  toggleButton,
 };
