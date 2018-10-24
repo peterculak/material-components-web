@@ -18,7 +18,7 @@ function getFixtureAriaPressed() {
   `;
 }
 
-// suite('MYToggleButton');
+suite('MYToggleButton');
 
 test('attachTo initializes and returns a MyButtonToggle instance', () => {
   assert.isTrue(MYToggleButton.attachTo(getFixture()) instanceof MYToggleButton);
