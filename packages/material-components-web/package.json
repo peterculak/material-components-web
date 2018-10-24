@@ -13,8 +13,6 @@
     "url": "https://github.com/material-components/material-components-web"
   },
   "dependencies": {
-    "@material/auto-init": "^0.39.0",
-    "@material/base": "^0.39.0",
-    "@material/typography": "^0.39.0"
+    "@material/auto-init": "^0.39.0"
   }
 }

@@ -22,7 +22,6 @@
  */
 
 import autoInit from '@material/auto-init/index';
-import * as base from '@material/base/index';
 import * as toggleButton from '../my-toggle-button/index';
 
 // Register all components
@@ -31,6 +30,5 @@ import * as toggleButton from '../my-toggle-button/index';
 // Export all components.
 export {
   autoInit,
-  base,
   toggleButton,
 };
