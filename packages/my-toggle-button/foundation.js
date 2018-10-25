@@ -9,7 +9,7 @@ class MYToggleButtonFoundation extends MDCFoundation {
       removeClass: (/* className: string */) => {},
       setToggleColorTextContent: (/* textContent: string */) => {},
       registerInteractionHandler: (/* type: string, handler: EventListener */) => {},
-      deregisterInteractionHandler: (/* type: string, handler: EventListener */) => {}
+      deregisterInteractionHandler: (/* type: string, handler: EventListener */) => {},
     };
   }
 
