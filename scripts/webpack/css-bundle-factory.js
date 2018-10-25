@@ -142,8 +142,8 @@ class CssBundleFactory {
     return this.createCustomCss({
       bundleName: 'main-css-a-la-carte',
       chunks: {
-        'mdc.typography': getAbsolutePath('/packages/mdc-typography/mdc-typography.scss'),
-        'mdc.toggleButton': getAbsolutePath('/packages/my-toggle-button/my-toggle-button.scss'),
+        'my.typography': getAbsolutePath('/packages/mdc-typography/mdc-typography.scss'),
+        'my.toggleButton': getAbsolutePath('/packages/my-toggle-button/my-toggle-button.scss'),
       },
       output: {
         fsDirAbsolutePath,

@@ -109,7 +109,7 @@ class JsBundleFactory {
         fsDirAbsolutePath,
         httpDirAbsolutePath,
         filenamePattern: this.env_.isProd() ? 'material-components-web.min.js' : 'material-components-web.js',
-        library: 'mdc',
+        library: 'my',
       },
       plugins: [
         this.pluginFactory_.createCopyrightBannerPlugin(),
@@ -138,8 +138,8 @@ class JsBundleFactory {
       output: {
         fsDirAbsolutePath,
         httpDirAbsolutePath,
-        filenamePattern: this.env_.isProd() ? 'mdc.[name].min.js' : 'mdc.[name].js',
-        library: ['mdc', '[name]'],
+        filenamePattern: this.env_.isProd() ? 'my.[name].min.js' : 'my.[name].js',
+        library: ['my', '[name]'],
       },
       plugins: [
         this.pluginFactory_.createCopyrightBannerPlugin(),
