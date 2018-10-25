@@ -1,0 +1,16 @@
+{
+  "name": "@wf/button-menu",
+  "description": "WF Button Menu",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "dist/wf.button-menu.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/material-components/material-components-web.git"
+  },
+  "dependencies": {
+    "@material/list": "^0.40.1",
+    "@material/menu": "^0.40.1",
+    "@material/menu-surface": "^0.40.1"
+  }
+}

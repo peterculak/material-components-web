@@ -139,6 +139,8 @@ class JsBundleFactory {
     return this.createCustomJs({
       bundleName: 'main-js-a-la-carte',
       chunks: {
+        menu: getAbsolutePath('/packages/wf-menu/index.js'),
+        menuSurface: getAbsolutePath('/packages/wf-menu-surface/index.js'),
         toggleButton: getAbsolutePath('/packages/wf-toggle-button/index.js'),
       },
       output: {
