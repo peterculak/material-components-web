@@ -65,6 +65,21 @@ class JsBundleFactory {
     }) {
     chunks = chunks || this.globber_.getChunks({inputDirectory, filePathPattern});
 
+    let rule = {
+      test: /\.js$/,
+      loader: 'babel-loader',
+      options: {
+        cacheDirectory: true,
+      },
+    };
+
+    if (!this.env_.isProd()) {
+      rule = Object.assign(rule, {
+        exclude: /node_modules/,
+        include: '/node_modules/@material/',
+      });
+    }
+
     return {
       name: bundleName,
       entry: chunks,
@@ -77,15 +92,7 @@ class JsBundleFactory {
       },
       devtool: 'source-map',
       module: {
-        rules: [{
-          test: /\.js$/,
-          // this seems to fix TypeError: Class constructor MDCComponent cannot be invoked without 'new'
-          // exclude: /node_modules/,
-          loader: 'babel-loader',
-          options: {
-            cacheDirectory: true,
-          },
-        }],
+        rules: [rule],
       },
       plugins: [
         ...plugins,
