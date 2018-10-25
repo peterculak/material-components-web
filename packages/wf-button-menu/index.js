@@ -1,9 +1,9 @@
-import {strings as MDCMenuStrings} from '@material/menu/constants';
+import MDCComponent from '@material/base/component';
 import WFMenu from '../wf-menu/index';
-import WFMenuSurfaceFoundation from '../wf-menu-surface/foundation';
-import {strings, cssClasses, Corner} from './constants';
+import {strings, Corner} from './constants';
+import WFButtonMenuFoundation from '../wf-button-menu/foundation';
 
-class WFButtonMenu {
+class WFButtonMenu extends MDCComponent {
   /**
    * @param {!Element} root
    * @return {!WFButtonMenu}
@@ -12,92 +12,35 @@ class WFButtonMenu {
     return new WFButtonMenu(root);
   }
 
-  /**
-   * @param {!Element} root
-   */
-  constructor(root) {
-    /** @private {!Element} */
-    this.root_ = root;
-    /** @private {!Element} */
+  initialize() {
     this.buttonElement_ = this.root_.querySelector(
       strings.MENU_TRIGGER_SELECTOR);
     /** @private {!Element} */
     this.menuElement_ = this.root_.querySelector(strings.MENU_SELECTOR);
     /** @private {!WFMenu} */
-    this.menu_;
-
-    this.initialize();
-  }
-
-  initialize() {
     this.menu_ = WFMenu.attachTo(this.menuElement_);
     this.menu_.setAnchorCorner(Corner.BOTTOM_START);
     this.menu_.quickOpen = true;
-
-    this.handleButtonClick_();
-    this.handleMenuItemSelection_();
-    this.handleMenuOpen_();
-    this.handleMenuClose_();
   }
 
-  /**
-   * Open/Close menu on button click
-   * @private
-   */
-  handleButtonClick_() {
-    this.buttonElement_.addEventListener('click', () => {
-      this.menu_.open = !this.menu_.open;
-    });
-  }
-
-  /**
-   * Follows href of selected item when it has one
-   * @private
-   */
-  handleMenuItemSelection_() {
-    this.menuElement_.addEventListener(
-      MDCMenuStrings.SELECTED_EVENT,
-      (evt) => {
+  getDefaultFoundation() {
+    return new WFButtonMenuFoundation({
+      toggle: () => this.menu_.open = !this.menu_.open,
+      openUrlFromEvent: (menu, evt) => {
         if (evt.detail.item.href) {
           window.location = evt.detail.item.href;
         }
-      });
-  }
-
-  /**
-   * Adds classes to root element to indicate whether it's opened up/down
-   * @private
-   */
-  handleMenuOpen_() {
-    this.menuElement_.addEventListener(
-        WFMenuSurfaceFoundation.strings.OPENED_EVENT, () => {
-          this.root_.classList.add(
-              cssClasses.BUTTON_MENU_OPENED);
-          if (this.menu_.isOpenedDown()) {
-            this.root_.classList.add(
-                cssClasses.BUTTON_MENU_OPENED_DOWN_CLASS);
-          } else if (this.menu_.isOpenedUp()) {
-            this.root_.classList.add(
-                cssClasses.BUTTON_MENU_OPENED_UP_CLASS);
-          }
-        });
-  }
-
-  /**
-   * Removes classes from root which indicated it was opened
-   * Removes focus from trigger button
-   * @private
-   */
-  handleMenuClose_() {
-    this.menuElement_.addEventListener(
-        WFMenuSurfaceFoundation.strings.CLOSED_EVENT, () => {
-          this.root_.classList.remove(
-              cssClasses.BUTTON_MENU_OPENED,
-              cssClasses.BUTTON_MENU_OPENED_UP_CLASS,
-              cssClasses.BUTTON_MENU_OPENED_DOWN_CLASS,
-          );
-          this.buttonElement_.blur();
-        });
+      },
+      blurButton: () => this.buttonElement_.blur(),
+      addClass: (className) => this.root_.classList.add(className),
+      removeClass: (...className) => this.root_.classList.remove(...className),
+      registerButtonInteractionHandler: (type, handler) => this.buttonElement_.addEventListener(type, handler),
+      deregisterButtonInteractionHandler: (type, handler) => this.buttonElement_.removeEventListener(type, handler),
+      registerMenuInteractionHandler: (type, handler) => this.menuElement_.addEventListener(
+        type, handler.bind(this, this.menu_)
+      ),
+      deregisterMenuInteractionHandler: (type, handler) => this.menuElement_.removeEventListener(type, handler),
+    });
   }
 }
 

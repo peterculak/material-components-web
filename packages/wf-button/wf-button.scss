@@ -6,7 +6,6 @@
   //remove styles from node_modules/aria-accordion/example/style.css
   @include wf-button-reset_;
   @include mdc-button-base_;
-  //@include mdc-button-corner-radius(3px);//@todo: fix this
   @include mdc-button-container-fill-color(surface);
   @include wf-button-base_;
 
