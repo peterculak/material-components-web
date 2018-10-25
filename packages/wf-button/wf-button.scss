@@ -1,0 +1,34 @@
+@import "@material/button/mdc-button";
+@import "./mixins";
+@import "./variables";
+
+.wf-buttonv2 {
+  //remove styles from node_modules/aria-accordion/example/style.css
+  @include wf-button-reset_;
+  @include mdc-button-base_;
+  //@include mdc-button-corner-radius(3px);//@todo: fix this
+  @include mdc-button-container-fill-color(surface);
+  @include wf-button-base_;
+
+  &--primary {
+    @include mdc-button--filled_;
+    @include mdc-button-container-fill-color(primary);
+    @include mdc-button-ink-color(on-primary);
+    @include wf-button-states(on-primary, secondary);
+    @include wf-button-shadow_;
+  }
+
+  &--secondary {
+    @include mdc-button--outlined_;
+    @include mdc-button-outline-width(1px);
+    @include mdc-button-outline-color(primary);
+    @include mdc-button-ink-color(text-primary-on-background);
+    @include wf-button-states(on-primary, primary);
+    @include wf-button-shadow_;
+  }
+
+  &--tertiary {
+    @include mdc-button-ink-color(primary);
+    @include wf-button-states(primary, rgba(229, 229, 229, 1));
+  }
+}

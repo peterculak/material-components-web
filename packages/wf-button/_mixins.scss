@@ -1,0 +1,82 @@
+@import "./variables";
+@import "@material/button/mixins";
+@import "@material/layout-grid/mixins";
+
+@mixin mdc-button-base_() {
+  @include mdc-typography(button);
+  // disabling ripples
+  // @include mdc-ripple-surface;
+  // @include mdc-ripple-radius-bounded;
+  @include mdc-button-horizontal-padding($mdc-button-horizontal-padding);
+
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 64px;
+  height: $mdc-button-height;
+  border: none;
+  outline: none;
+
+  /* @alternate */
+  line-height: inherit;
+  user-select: none;
+  -webkit-appearance: none;
+  overflow: hidden;
+  vertical-align: middle;
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  // postcss-bem-linter: ignore
+  &:active {
+    outline: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    @include mdc-theme-prop(background-color, transparent);
+
+    color: $mdc-button-disabled-ink-color;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+@mixin wf-button-base_() {
+  @include mdc-layout-grid-media-query_(phone) {
+    width: 100%;
+  }
+
+  @include mdc-layout-grid-media-query_(tablet) {
+    width: 100%;
+  }
+}
+
+@mixin wf-button-shadow_() {
+  &:not([disabled]) {
+    box-shadow: 0 1px 1px 0 rgba(black, .5);
+  }
+}
+
+@mixin wf-button-states($text-color, $background-color) {
+  &:active,
+  &:focus,
+  &:hover {
+    @include mdc-theme-prop(color, $text-color);
+    @include mdc-theme-prop(background-color, $background-color);
+  }
+}
+
+@mixin wf-button-reset_() {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  width: auto;
+}
