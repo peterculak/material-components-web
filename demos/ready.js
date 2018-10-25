@@ -44,7 +44,7 @@ window.demoReady = (function(root) {
       return true;
     }
     ensureDetectionDom();
-    isReadyCached = (Boolean(window.my) || (isDomLoaded && !root.querySelector('script[src*="material-components-web.js"]')));
+    isReadyCached = (Boolean(window.wf) || (isDomLoaded && !root.querySelector('script[src*="material-components-web.js"]')));
     return isReadyCached;
   }
 

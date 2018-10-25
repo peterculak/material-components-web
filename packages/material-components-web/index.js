@@ -23,10 +23,10 @@
 
 import autoInit from '@material/auto-init/index';
 import * as base from '@material/base/index';
-import * as toggleButton from '../my-toggle-button/index';
+import * as toggleButton from '../wf-toggle-button/index';
 
 // Register all components
-autoInit.register('MYToggleButton', toggleButton.MYToggleButton);
+autoInit.register('WFToggleButton', toggleButton.WFToggleButton);
 
 // Export all components.
 export {

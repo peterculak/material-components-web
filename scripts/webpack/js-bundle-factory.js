@@ -117,7 +117,7 @@ class JsBundleFactory {
         fsDirAbsolutePath,
         httpDirAbsolutePath,
         filenamePattern: this.env_.isProd() ? 'material-components-web.min.js' : 'material-components-web.js',
-        library: 'my',
+        library: 'wf',
       },
       plugins: [
         this.pluginFactory_.createCopyrightBannerPlugin(),
@@ -139,13 +139,13 @@ class JsBundleFactory {
     return this.createCustomJs({
       bundleName: 'main-js-a-la-carte',
       chunks: {
-        toggleButton: getAbsolutePath('/packages/my-toggle-button/index.js'),
+        toggleButton: getAbsolutePath('/packages/wf-toggle-button/index.js'),
       },
       output: {
         fsDirAbsolutePath,
         httpDirAbsolutePath,
-        filenamePattern: this.env_.isProd() ? 'my.[name].min.js' : 'my.[name].js',
-        library: ['my', '[name]'],
+        filenamePattern: this.env_.isProd() ? 'wf.[name].min.js' : 'wf.[name].js',
+        library: ['wf', '[name]'],
       },
       plugins: [
         this.pluginFactory_.createCopyrightBannerPlugin(),

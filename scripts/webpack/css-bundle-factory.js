@@ -142,7 +142,7 @@ class CssBundleFactory {
     return this.createCustomCss({
       bundleName: 'main-css-a-la-carte',
       chunks: {
-        'my.toggle-button': getAbsolutePath('/packages/my-toggle-button/my-toggle-button.scss'),
+        'wf.toggle-button': getAbsolutePath('/packages/wf-toggle-button/wf-toggle-button.scss'),
       },
       output: {
         fsDirAbsolutePath,

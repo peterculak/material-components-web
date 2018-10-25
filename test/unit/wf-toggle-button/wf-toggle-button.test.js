@@ -1,6 +1,6 @@
 import {assert} from 'chai';
 import bel from 'bel';
-import {MYToggleButton, MYToggleButtonFoundation} from '../../../packages/my-toggle-button/index';
+import {WFToggleButton, WFToggleButtonFoundation} from '../../../packages/wf-toggle-button/index';
 
 function getFixture() {
   return bel`
@@ -18,30 +18,30 @@ function getFixtureAriaPressed() {
   `;
 }
 
-suite('MYToggleButton');
+suite('WFToggleButton');
 
 test('attachTo initializes and returns a MyButtonToggle instance', () => {
-  assert.isTrue(MYToggleButton.attachTo(getFixture()) instanceof MYToggleButton);
+  assert.isTrue(WFToggleButton.attachTo(getFixture()) instanceof WFToggleButton);
 });
 
 test('getToggled returns false when aria-pressed is not set', () => {
-  const component = MYToggleButton.attachTo(getFixture());
+  const component = WFToggleButton.attachTo(getFixture());
   assert.isFalse(component.toggled);
 });
 
 test('getToggled returns true when aria-pressed is set', () => {
-  const component = MYToggleButton.attachTo(getFixtureAriaPressed());
+  const component = WFToggleButton.attachTo(getFixtureAriaPressed());
   assert.isTrue(component.toggled);
 });
 
 test('setToggled sets toggled state from false to true', () => {
-  const component = MYToggleButton.attachTo(getFixture());
+  const component = WFToggleButton.attachTo(getFixture());
   assert.isFalse(component.toggled);
   component.toggled = true;
   assert.isTrue(component.toggled);
 });
 
 test('getDefaultFoundation returns instance of MyRedblueToggleFoundation', () => {
-  const component = MYToggleButton.attachTo(getFixture());
-  assert.isTrue(component.getDefaultFoundation() instanceof MYToggleButtonFoundation);
+  const component = WFToggleButton.attachTo(getFixture());
+  assert.isTrue(component.getDefaultFoundation() instanceof WFToggleButtonFoundation);
 });

@@ -1,6 +1,6 @@
 import MDCFoundation from '@material/base/foundation';
 
-class MYToggleButtonFoundation extends MDCFoundation {
+class WFToggleButtonFoundation extends MDCFoundation {
   static get defaultAdapter() {
     return {
       getAttr: (/* attr: string */) => /* string */ '',
@@ -14,7 +14,7 @@ class MYToggleButtonFoundation extends MDCFoundation {
   }
 
   constructor(adapter) {
-    super(Object.assign(MYToggleButtonFoundation.defaultAdapter, adapter));
+    super(Object.assign(WFToggleButtonFoundation.defaultAdapter, adapter));
     this.toggled_ = false;
     this.clickHandler_ = () => this.toggle();
   }
@@ -49,4 +49,4 @@ class MYToggleButtonFoundation extends MDCFoundation {
   }
 }
 
-export default MYToggleButtonFoundation;
+export default WFToggleButtonFoundation;
