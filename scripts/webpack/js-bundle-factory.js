@@ -79,7 +79,8 @@ class JsBundleFactory {
       module: {
         rules: [{
           test: /\.js$/,
-          exclude: /node_modules/,
+          // this seems to fix TypeError: Class constructor MDCComponent cannot be invoked without 'new'
+          // exclude: /node_modules/,
           loader: 'babel-loader',
           options: {
             cacheDirectory: true,
