@@ -143,7 +143,7 @@ class CssBundleFactory {
       bundleName: 'main-css-a-la-carte',
       chunks: {
         'mdc.typography': getAbsolutePath('/packages/mdc-typography/mdc-typography.scss'),
-        'mdc.toggleButton': getAbsolutePath('/packages/mdc-toggle-button/mdc-toggle-button.scss'),
+        'mdc.toggleButton': getAbsolutePath('/packages/my-toggle-button/my-toggle-button.scss'),
       },
       output: {
         fsDirAbsolutePath,

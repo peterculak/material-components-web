@@ -1,7 +1,7 @@
 import MDCComponent from '@material/base/component';
-import MDCToggleButtonFoundation from './foundation';
+import MYToggleButtonFoundation from './foundation';
 
-class MDCToggleButton extends MDCComponent {
+class MYToggleButton extends MDCComponent {
   get toggled() {
     return this.foundation_.isToggled();
   }
@@ -11,11 +11,11 @@ class MDCToggleButton extends MDCComponent {
   }
 
   static attachTo(root) {
-    return new MDCToggleButton(root);
+    return new MYToggleButton(root);
   }
 
   getDefaultFoundation() {
-    return new MDCToggleButtonFoundation({
+    return new MYToggleButtonFoundation({
       getAttr: attr => this.root_.getAttribute(attr),
       setAttr: (attr, value) => this.root_.setAttribute(attr, value),
       addClass: className => this.root_.classList.add(className),
@@ -29,4 +29,4 @@ class MDCToggleButton extends MDCComponent {
   }
 }
 
-export {MDCToggleButton, MDCToggleButtonFoundation};
+export {MYToggleButton, MYToggleButtonFoundation};

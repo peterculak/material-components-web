@@ -133,7 +133,7 @@ class JsBundleFactory {
       chunks: {
         autoInit: getAbsolutePath('/packages/mdc-auto-init/index.js'),
         base: getAbsolutePath('/packages/mdc-base/index.js'),
-        toggleButton: getAbsolutePath('/packages/mdc-toggle-button/index.js'),
+        toggleButton: getAbsolutePath('/packages/my-toggle-button/index.js'),
       },
       output: {
         fsDirAbsolutePath,

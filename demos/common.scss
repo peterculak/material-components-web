@@ -24,7 +24,7 @@
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
 
-@import "../packages/mdc-theme/color-palette";
+//@import "../packages/mdc-theme/color-palette";
 
 // Base style
 $mdc-theme-primary: #6200ee !default; // baseline purple, 500 tone
@@ -32,9 +32,9 @@ $mdc-theme-secondary: #018786 !default; // baseline teal, 600 tone
 
 // All demo pages have a top toolbar, and most of them use theme variables.
 // Import these *after* setting theme colors to override defaults in mdc-theme.
-@import "../packages/mdc-theme/mdc-theme";
-@import "../packages/mdc-toolbar/mdc-toolbar";
-@import "../packages/mdc-typography/mdc-typography";
+//@import "../packages/mdc-theme/mdc-theme";
+//@import "../packages/mdc-toolbar/mdc-toolbar";
+//@import "../packages/mdc-typography/mdc-typography";
 
 // Used by ready.js to test whether the CSS has finished loading.
 .demo-ready-detect {

@@ -1,6 +1,6 @@
 import {assert} from 'chai';
 import bel from 'bel';
-import {MDCToggleButton, MDCToggleButtonFoundation} from '../../../packages/mdc-toggle-button/index';
+import {MYToggleButton, MYToggleButtonFoundation} from '../../../packages/my-toggle-button/index';
 
 function getFixture() {
   return bel`
@@ -18,30 +18,30 @@ function getFixtureAriaPressed() {
   `;
 }
 
-suite('MDCToggleButton');
+suite('MYToggleButton');
 
 test('attachTo initializes and returns a MyButtonToggle instance', () => {
-  assert.isTrue(MDCToggleButton.attachTo(getFixture()) instanceof MDCToggleButton);
+  assert.isTrue(MYToggleButton.attachTo(getFixture()) instanceof MYToggleButton);
 });
 
 test('getToggled returns false when aria-pressed is not set', () => {
-  const component = MDCToggleButton.attachTo(getFixture());
+  const component = MYToggleButton.attachTo(getFixture());
   assert.isFalse(component.toggled);
 });
 
 test('getToggled returns true when aria-pressed is set', () => {
-  const component = MDCToggleButton.attachTo(getFixtureAriaPressed());
+  const component = MYToggleButton.attachTo(getFixtureAriaPressed());
   assert.isTrue(component.toggled);
 });
 
 test('setToggled sets toggled state from false to true', () => {
-  const component = MDCToggleButton.attachTo(getFixture());
+  const component = MYToggleButton.attachTo(getFixture());
   assert.isFalse(component.toggled);
   component.toggled = true;
   assert.isTrue(component.toggled);
 });
 
 test('getDefaultFoundation returns instance of MyRedblueToggleFoundation', () => {
-  const component = MDCToggleButton.attachTo(getFixture());
-  assert.isTrue(component.getDefaultFoundation() instanceof MDCToggleButtonFoundation);
+  const component = MYToggleButton.attachTo(getFixture());
+  assert.isTrue(component.getDefaultFoundation() instanceof MYToggleButtonFoundation);
 });

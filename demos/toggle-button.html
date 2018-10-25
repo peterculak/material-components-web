@@ -23,37 +23,82 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Material Components Catalog</title>
+    <title>Button - Material Components Catalog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="/images/logo_components_color_2x_web_48dp.png">
-    <link rel="stylesheet" href="/assets/index.css">
+    <link rel="stylesheet" href="/assets/button.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="/ready.js"></script>
+    <style>
+      .demo-wrapper {
+        padding-bottom: 100px;
+      }
+
+      fieldset {
+        padding: 24px;
+        padding-top: 0;
+        padding-bottom: 16px;
+      }
+      fieldset .mdc-button {
+        margin: 16px;
+      }
+
+      .hero button {
+        margin-left: 32px;
+        margin-right: 32px;
+      }
+
+      fieldset legend {
+        display: block;
+        padding: 16px;
+        padding-top: 48px;
+        padding-bottom: 24px;
+      }
+      h1 {
+        padding-left: 36px;
+        padding-top: 64px;
+        padding-bottom: 8px;
+      }
+
+      .mdc-form-field {
+        margin: 50px 0 -20px 30px;
+      }
+      .hero {
+        position: relative;
+      }
+      .hero .note {
+        position: absolute;
+        bottom: 10px;
+        left: 36px;
+        color: rgba(33, 33, 33, .38);
+      }
+    </style>
   </head>
   <body class="mdc-typography">
     <header class="mdc-toolbar mdc-toolbar--fixed">
       <div class="mdc-toolbar__row">
         <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-          <span class="catalog-logo mdc-toolbar__menu-icon">
-            <img src="/images/ic_component_24px_white.svg">
-          </span>
-          <span class="mdc-toolbar__title catalog-title">Material Components Catalog</span>
+          <a href="/" class="catalog-back mdc-toolbar__menu-icon"><i class="material-icons">&#xE5C4;</i></a>
+          <span class="mdc-toolbar__title catalog-title">Buttons</span>
         </section>
       </div>
     </header>
-    <main>
-      <nav class="mdc-toolbar-fixed-adjust">
-        <div role="list" class="demo-catalog-list mdc-list mdc-list--two-line">
-          <a href="toggle-button.html" role="listitem" class="mdc-list-item">
-            <span class="demo-catalog-list-icon mdc-list-item__graphic"><img src="/images/ic_button_24px.svg" /></span>
-            <span class="mdc-list-item__text">
-              <span class="mdc-list-item__primary-text">Toggle Button</span>
-              <span class="mdc-list-item__secondary-text">Toggle Button Demo</span>
-            </span>
-          </a>
 
+    <main class="mdc-toolbar-fixed-adjust">
+      <section class="demo-wrapper">
+        <div class="redblue-toggle" role="button" aria-pressed="false">
+          Toggle <span class="redblue-toggle__color">Blue</span>
         </div>
-      </nav>
+      </section>
     </main>
+
+    <script src="/assets/material-components-web.js" async></script>
+    <script>
+      demoReady(function() {
+        mdc.toggleButton.MYToggleButton.attachTo(document.querySelector('.redblue-toggle'));
+      });
+    </script>
   </body>
 </html>

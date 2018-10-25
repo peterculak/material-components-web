@@ -23,10 +23,10 @@
 
 import autoInit from '@material/auto-init/index';
 import * as base from '@material/base/index';
-import * as toggleButton from '../mdc-toggle-button/index';
+import * as toggleButton from '../my-toggle-button/index';
 
 // Register all components
-autoInit.register('MDCToggleButton', toggleButton.MDCToggleButton);
+// autoInit.register('MYToggleButton', toggleButton.MYToggleButton);
 
 // Export all components.
 export {
