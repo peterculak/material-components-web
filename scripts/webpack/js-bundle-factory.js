@@ -131,8 +131,6 @@ class JsBundleFactory {
     return this.createCustomJs({
       bundleName: 'main-js-a-la-carte',
       chunks: {
-        autoInit: getAbsolutePath('/packages/mdc-auto-init/index.js'),
-        base: getAbsolutePath('/packages/mdc-base/index.js'),
         toggleButton: getAbsolutePath('/packages/my-toggle-button/index.js'),
       },
       output: {

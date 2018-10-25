@@ -1,9 +1,9 @@
 {
-  "name": "@material/toggle-button",
+  "name": "@my/toggle-button",
   "description": "Toggle button",
   "version": "0.0.1",
   "license": "MIT",
-  "main": "dist/mdc.toggle-button.js",
+  "main": "dist/my.toggle-button.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/material-components/material-components-web.git"

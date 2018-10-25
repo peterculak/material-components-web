@@ -26,7 +26,7 @@ import * as base from '@material/base/index';
 import * as toggleButton from '../my-toggle-button/index';
 
 // Register all components
-// autoInit.register('MYToggleButton', toggleButton.MYToggleButton);
+autoInit.register('MYToggleButton', toggleButton.MYToggleButton);
 
 // Export all components.
 export {
