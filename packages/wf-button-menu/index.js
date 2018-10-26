@@ -1,5 +1,5 @@
 import MDCComponent from '@material/base/component';
-import WFMenu from '../wf-menu/index';
+import {WFMenu} from '../wf-menu/index';
 import {strings, Corner} from './constants';
 import WFButtonMenuFoundation from '../wf-button-menu/foundation';
 

@@ -1,7 +1,7 @@
 import {CornerBit, MDCMenuSurfaceFoundation} from '@material/menu-surface';
 import {numbers} from '@material/menu-surface/constants';
 
-export default class WFMenuSurfaceFoundation extends MDCMenuSurfaceFoundation {
+class WFMenuSurfaceFoundation extends MDCMenuSurfaceFoundation {
   get verticalAlignment() {
     return this.verticalAlignment_;
   }
@@ -55,3 +55,4 @@ export default class WFMenuSurfaceFoundation extends MDCMenuSurfaceFoundation {
   }
 }
 
+export default WFMenuSurfaceFoundation;

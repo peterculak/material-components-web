@@ -5,7 +5,7 @@ import {
 import * as util from '@material/menu-surface/util';
 import WFMenuSurfaceFoundation from './foundation';
 
-export default class WFMenuSurface extends MDCMenuSurface {
+class WFMenuSurface extends MDCMenuSurface {
   isOpenedDown() {
     return this.foundation_.isOpen() && this.foundation_.verticalAlignment ===
         'top';
@@ -54,3 +54,5 @@ export default class WFMenuSurface extends MDCMenuSurface {
       ));
   }
 }
+
+export {WFMenuSurface, WFMenuSurfaceFoundation};

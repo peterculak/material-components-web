@@ -1,8 +1,8 @@
 import {MDCMenu} from '@material/menu/index';
 import {MDCList} from '@material/list';
-import WFMenuSurface from '../wf-menu-surface';
+import {WFMenuSurface} from '../wf-menu-surface';
 
-export default class WFMenu extends MDCMenu {
+class WFMenu extends MDCMenu {
   /**
    * @param {!Element} root
    * @return {!WFMenu}
@@ -24,3 +24,5 @@ export default class WFMenu extends MDCMenu {
     return this.menuSurface_.isOpenedUp();
   }
 }
+
+export {WFMenu};
