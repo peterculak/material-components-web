@@ -40,10 +40,10 @@ class WFToggleButtonFoundation extends MDCFoundation {
     this.adapter_.setAttr('aria-pressed', String(this.toggled_));
     if (this.toggled_) {
       toggleColor = 'Red';
-      this.adapter_.addClass('redblue-toggle--toggled');
+      this.adapter_.addClass('wf-toggle-button--toggled');
     } else {
       toggleColor = 'Blue';
-      this.adapter_.removeClass('redblue-toggle--toggled');
+      this.adapter_.removeClass('wf-toggle-button--toggled');
     }
     this.adapter_.setToggleColorTextContent(toggleColor);
   }

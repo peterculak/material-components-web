@@ -26,6 +26,7 @@
     <title>Button - Material Components Catalog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="/images/logo_components_color_2x_web_48dp.png">
+    <link rel="stylesheet" href="/assets/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -87,8 +88,8 @@
 
     <main class="mdc-toolbar-fixed-adjust">
       <section class="demo-wrapper">
-        <div class="redblue-toggle" role="button" aria-pressed="false">
-          Toggle <span class="redblue-toggle__color">Blue</span>
+        <div class="wf-toggle-button" role="button" aria-pressed="false">
+          Toggle <span class="wf-toggle-button__color">Blue</span>
         </div>
       </section>
     </main>
@@ -96,7 +97,7 @@
     <script src="/assets/material-components-web.js" async></script>
     <script>
       demoReady(function() {
-        wf.toggleButton.WFToggleButton.attachTo(document.querySelector('.redblue-toggle'));
+        wf.toggleButton.WFToggleButton.attachTo(document.querySelector('.wf-toggle-button'));
       });
     </script>
   </body>

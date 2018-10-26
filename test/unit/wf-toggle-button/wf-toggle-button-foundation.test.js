@@ -41,12 +41,12 @@ test('toggle not explicitly set', () => {
 
   foundation.toggle();
   td.verify(mockAdapter.setToggleColorTextContent('Red'), {times: 1});
-  td.verify(mockAdapter.addClass('redblue-toggle--toggled'), {times: 1});
+  td.verify(mockAdapter.addClass('wf-toggle-button--toggled'), {times: 1});
   td.verify(mockAdapter.setAttr('aria-pressed', 'true'), {times: 1});
 
   foundation.toggle();
   td.verify(mockAdapter.setToggleColorTextContent('Blue'), {times: 1});
-  td.verify(mockAdapter.removeClass('redblue-toggle--toggled'), {times: 1});
+  td.verify(mockAdapter.removeClass('wf-toggle-button--toggled'), {times: 1});
   td.verify(mockAdapter.setAttr('aria-pressed', 'false'), {times: 1});
 });
 
@@ -56,7 +56,7 @@ test('toggle(true)', () => {
 
   foundation.toggle(true);
   td.verify(mockAdapter.setToggleColorTextContent('Red'), {times: 1});
-  td.verify(mockAdapter.addClass('redblue-toggle--toggled'), {times: 1});
+  td.verify(mockAdapter.addClass('wf-toggle-button--toggled'), {times: 1});
   td.verify(mockAdapter.setAttr('aria-pressed', 'true'), {times: 1});
 });
 
@@ -66,6 +66,6 @@ test('toggle(false)', () => {
 
   foundation.toggle(false);
   td.verify(mockAdapter.setToggleColorTextContent('Blue'), {times: 1});
-  td.verify(mockAdapter.removeClass('redblue-toggle--toggled'), {times: 1});
+  td.verify(mockAdapter.removeClass('wf-toggle-button--toggled'), {times: 1});
   td.verify(mockAdapter.setAttr('aria-pressed', 'false'), {times: 1});
 });

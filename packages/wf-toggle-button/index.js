@@ -21,7 +21,7 @@ class WFToggleButton extends MDCComponent {
       addClass: (className) => this.root_.classList.add(className),
       removeClass: (className) => this.root_.classList.remove(className),
       setToggleColorTextContent: (textContent) => {
-        this.root_.querySelector('.redblue-toggle__color').textContent = textContent;
+        this.root_.querySelector('.wf-toggle-button__color').textContent = textContent;
       },
       registerInteractionHandler: (type, handler) => this.root_.addEventListener(type, handler),
       deregisterInteractionHandler: (type, handler) => this.root_.removeEventListener(type, handler),

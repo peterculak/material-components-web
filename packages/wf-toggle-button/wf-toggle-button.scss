@@ -1,3 +1,11 @@
 .wf-toggle-button {
-  color: red;
+  &__color {
+    color: blue;
+  }
+
+  &--toggled {
+    .wf-toggle-button__color {
+      color: red;
+    }
+  }
 }

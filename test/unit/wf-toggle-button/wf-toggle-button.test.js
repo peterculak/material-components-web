@@ -4,16 +4,16 @@ import {WFToggleButton, WFToggleButtonFoundation} from '../../../packages/wf-tog
 
 function getFixture() {
   return bel`
-  <div class="redblue-toggle" role="button" aria-pressed="false">
-  Toggle <span class="redblue-toggle__color">Blue</span>
+  <div class="wf-toggle-button" role="button" aria-pressed="false">
+  Toggle <span class="wf-toggle-button__color">Blue</span>
   </div>
   `;
 }
 
 function getFixtureAriaPressed() {
   return bel`
-  <div class="redblue-toggle" role="button" aria-pressed="true">
-  Toggle <span class="redblue-toggle__color">Red</span>
+  <div class="wf-toggle-button" role="button" aria-pressed="true">
+  Toggle <span class="wf-toggle-button__color">Red</span>
   </div>
   `;
 }
