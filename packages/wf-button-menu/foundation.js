@@ -38,7 +38,8 @@ class WFButtonMenuFoundation extends MDCFoundation {
     this.adapter_.deregisterButtonInteractionHandler('click', this.buttonHandler_);
     this.adapter_.deregisterMenuInteractionHandler(MDCMenuStrings.SELECTED_EVENT, this.menuOpenHandler_);
     this.adapter_.deregisterMenuInteractionHandler(WFMenuSurfaceFoundation.strings.OPENED_EVENT, this.menuOpenHandler_);
-    this.adapter_.deregisterMenuInteractionHandler(WFMenuSurfaceFoundation.strings.CLOSED_EVENT, this.menuCloseHandler_);
+    this.adapter_.deregisterMenuInteractionHandler(
+      WFMenuSurfaceFoundation.strings.CLOSED_EVENT, this.menuCloseHandler_);
   }
 
   menuOpen_(menu) {

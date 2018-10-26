@@ -27,30 +27,30 @@ export default class WFMenuSurface extends MDCMenuSurface {
   /** @return {!WFMenuSurfaceFoundation} */
   getDefaultFoundation() {
     return new WFMenuSurfaceFoundation(
-        /** @type {!MDCMenuSurfaceAdapter} */
-        (Object.assign(
-          {
-            addClass: (className) => this.root_.classList.add(className),
-            removeClass: (className) => this.root_.classList.remove(
-                className),
-            hasClass: (className) => this.root_.classList.contains(
-                className),
-            hasAnchor: () => !!this.anchorElement,
-            notifyClose: () => this.emit(
-                MDCMenuSurfaceFoundation.strings.CLOSED_EVENT, {}),
-            notifyOpen: () => this.emit(
-                MDCMenuSurfaceFoundation.strings.OPENED_EVENT, {}),
-            isElementInContainer: (el) => this.root_ === el ||
+      /** @type {!MDCMenuSurfaceAdapter} */
+      (Object.assign(
+        {
+          addClass: (className) => this.root_.classList.add(className),
+          removeClass: (className) => this.root_.classList.remove(
+            className),
+          hasClass: (className) => this.root_.classList.contains(
+            className),
+          hasAnchor: () => !!this.anchorElement,
+          notifyClose: () => this.emit(
+            MDCMenuSurfaceFoundation.strings.CLOSED_EVENT, {}),
+          notifyOpen: () => this.emit(
+            MDCMenuSurfaceFoundation.strings.OPENED_EVENT, {}),
+          isElementInContainer: (el) => this.root_ === el ||
                 this.root_.contains(el),
-            isRtl: () => getComputedStyle(this.root_).
-                getPropertyValue('direction') === 'rtl',
-            setTransformOrigin: (origin) => {
-              this.root_.style[`${util.getTransformPropertyName(
-                  window)}-origin`] = origin;
-            },
+          isRtl: () => getComputedStyle(this.root_).
+            getPropertyValue('direction') === 'rtl',
+          setTransformOrigin: (origin) => {
+            this.root_.style[`${util.getTransformPropertyName(
+              window)}-origin`] = origin;
           },
-          this.getFocusAdapterMethods_(),
-          this.getDimensionAdapterMethods_())
-        ));
+        },
+        this.getFocusAdapterMethods_(),
+        this.getDimensionAdapterMethods_())
+      ));
   }
 }

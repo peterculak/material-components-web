@@ -1,4 +1,4 @@
-import { Corner } from '@material/menu-surface/constants';
+import {Corner} from '@material/menu-surface/constants';
 
 /** @enum {string} */
 const strings = {
@@ -14,4 +14,4 @@ const cssClasses = {
   BUTTON_MENU_OPENED_DOWN_CLASS: 'wf-button-menu--opened-down',
 };
 
-export { strings, cssClasses, Corner };
+export {strings, cssClasses, Corner};

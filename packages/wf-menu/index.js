@@ -1,5 +1,5 @@
-import { MDCMenu } from '@material/menu/index';
-import { MDCList } from '@material/list';
+import {MDCMenu} from '@material/menu/index';
+import {MDCList} from '@material/list';
 import WFMenuSurface from '../wf-menu-surface';
 
 export default class WFMenu extends MDCMenu {
@@ -9,10 +9,10 @@ export default class WFMenu extends MDCMenu {
    */
   static attachTo(root) {
     return new WFMenu(
-        root,
-        undefined,
-        el => new WFMenuSurface(el),
-        el => new MDCList(el),
+      root,
+      undefined,
+      (el) => new WFMenuSurface(el),
+      (el) => new MDCList(el),
     );
   }
 

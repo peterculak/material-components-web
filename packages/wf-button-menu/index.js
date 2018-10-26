@@ -44,4 +44,4 @@ class WFButtonMenu extends MDCComponent {
   }
 }
 
-export {WFButtonMenu};
+export {WFButtonMenu, WFButtonMenuFoundation};
